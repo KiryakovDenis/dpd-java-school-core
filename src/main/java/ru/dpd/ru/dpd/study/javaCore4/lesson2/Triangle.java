@@ -6,18 +6,18 @@ package ru.dpd.ru.dpd.study.javaCore4.lesson2;
  * @since  0.0.0.1
  * Реализация класса треугольник в рамках задания 2 на 5 уроке по JavaCore
  * Треугольник задается через длины трех сторон, реализована проверка на возможность существование треугольника.
- * Площадь треугольника рассчитывается по формуле Герона*/
-public class Triangle implements IShape{
+ * Площадь треугольника рассчитывается по формуле Герона
+ */
+public class Triangle implements Shape {
     private Double a;
     private Double b;
     private Double c;
 
     public Triangle(Double a, Double b, Double c) throws Exception {
+        this.validate(a, b, c);
         this.a = a;
         this.b = b;
         this.c = c;
-
-        this.validate();
     }
 
     private void validate(Double a, Double b, Double c) throws Exception {
@@ -26,17 +26,13 @@ public class Triangle implements IShape{
         }
     }
 
-    private void validate() throws Exception {
-        this.validate(this.a, this.b, this.c);
-    }
-
     public Double getA() {
         return a;
     }
 
     public void setA(Double a) throws Exception {
+        this.validate(a, this.b, this.c);
         this.a = a;
-        this.validate();
     }
 
     public Double getB() {
@@ -44,8 +40,8 @@ public class Triangle implements IShape{
     }
 
     public void setB(Double b) throws Exception {
+        this.validate(this.a, b, this.c);
         this.b = b;
-        this.validate();
     }
 
     public Double getC() {
@@ -53,8 +49,8 @@ public class Triangle implements IShape{
     }
 
     public void setC(Double c) throws Exception {
+        this.validate(this.a, this.b, c);
         this.c = c;
-        this.validate();
     }
 
     @Override

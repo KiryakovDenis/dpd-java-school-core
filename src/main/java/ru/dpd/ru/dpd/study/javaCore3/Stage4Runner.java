@@ -16,7 +16,7 @@ public class Stage4Runner {
         System.out.println("Урок4. Упражнение 1");
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
         System.out.printf("Список %s%n", list.toString());
-        System.out.printf("Сумма списка: %s%n", Stage4.summList(list).toString());
+        System.out.printf("Сумма списка: %s%n", Stage4.sumList(list).toString());
         System.out.println();
 
         System.out.println("Урок4. Упражнение 2");
@@ -51,7 +51,7 @@ public class Stage4Runner {
         System.out.println("Урок4. Упражнение 4");
         Integer[] s4e4Arr = {1, 1, 2, 3, 10};
         System.out.printf("Исходный массив %s%n", Arrays.toString(s4e4Arr));
-        System.out.printf("Результирующий список %s%n", Stage4.Array2HashSet(s4e4Arr));
+        System.out.printf("Результирующий список %s%n", Stage4.arrayToHashSet(s4e4Arr));
         System.out.println();
 
         System.out.println("Урок4. Упражнение 5");

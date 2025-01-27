@@ -15,9 +15,8 @@ public class Student {
     private String name;
     private Integer[] grades;
 
-    public Student(){};
 
-    public Student (Long studentID, String name, Integer[] grades){
+    public Student (Long studentID, String name, Integer[] grades) {
         this.studentId = studentID;
         this.name = name;
         this.grades = grades;
@@ -40,11 +39,17 @@ public class Student {
         return grades;
     }
 
-    public double calculateAverage(){
-        if (this.grades == null)
+    public double calculateAverage() {
+        if (this.grades == null) {
             return 0;
-        else
-            return Arrays.stream(this.grades).mapToInt(Integer::intValue).average().orElse(0);
+        }
+        else {
+            return Arrays
+                    .stream(this.grades)
+                    .mapToInt(Integer::intValue)
+                    .average()
+                    .orElse(0);
+        }
     }
 
     public void addGrade(Integer grade){

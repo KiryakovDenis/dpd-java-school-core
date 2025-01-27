@@ -10,10 +10,10 @@ import ru.dpd.ru.dpd.study.javaCore4.Stage5Runner;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        /*Stage1Runner.run();
+        Stage1Runner.run();
         Stage2Runner.run();
         Stage3Runner.run();
-        Stage4Runner.run();*/
+        Stage4Runner.run();
         Stage5Runner.run();
     }
 }

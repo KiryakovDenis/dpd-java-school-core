@@ -7,7 +7,7 @@ package ru.dpd.ru.dpd.study.javaCore4.lesson2;
  * Прямоугольник задается через длины двух соседних сторон.
  * Реализован метод toString
  */
-public class Rectangle implements IShape{
+public class Rectangle implements Shape {
     private double width;
     private double height;
 

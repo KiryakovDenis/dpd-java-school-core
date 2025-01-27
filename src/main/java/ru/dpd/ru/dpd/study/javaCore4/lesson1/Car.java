@@ -6,7 +6,7 @@ package ru.dpd.ru.dpd.study.javaCore4.lesson1;
  * Класс автомобиль создан в рамках задания 1 на 5 уроке по JavaCore.
  * В классе реализованы конструктор определяющий значения полей и метод move().
  */
-public class Car extends Vehicle{
+public class Car extends Vehicle {
     public Car(){
         this.setModel("ВАЗ 2101");
         this.setYear(1984);
@@ -21,5 +21,4 @@ public class Car extends Vehicle{
                 "И тогда черезвычайно\n" +
                 "Она в зад тебе влетит.");
     }
-
 }

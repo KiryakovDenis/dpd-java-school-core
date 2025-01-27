@@ -4,7 +4,7 @@ import ru.dpd.ru.dpd.study.javaCore4.lesson1.Bicycle;
 import ru.dpd.ru.dpd.study.javaCore4.lesson1.Car;
 import ru.dpd.ru.dpd.study.javaCore4.lesson1.Vehicle;
 import ru.dpd.ru.dpd.study.javaCore4.lesson2.Circle;
-import ru.dpd.ru.dpd.study.javaCore4.lesson2.IShape;
+import ru.dpd.ru.dpd.study.javaCore4.lesson2.Shape;
 import ru.dpd.ru.dpd.study.javaCore4.lesson2.Triangle;
 import ru.dpd.ru.dpd.study.javaCore4.lesson3.BankAccount;
 import ru.dpd.ru.dpd.study.javaCore4.lesson4.Addition;
@@ -14,7 +14,6 @@ import ru.dpd.ru.dpd.study.javaCore4.lesson4.Operation;
 import ru.dpd.ru.dpd.study.javaCore4.lesson5.Developer;
 import ru.dpd.ru.dpd.study.javaCore4.lesson5.Employee;
 import ru.dpd.ru.dpd.study.javaCore4.lesson5.Manager;
-import ru.dpd.ru.dpd.study.javaCore4.lesson6.ReadMe;
 
 import java.math.BigDecimal;
 
@@ -37,15 +36,15 @@ public class Stage5Runner {
         System.out.println();
 
         System.out.println("Упражнение 2");
-        IShape circle = new Circle(1.0);
+        Shape circle = new Circle(1.0);
         System.out.println(circle);
         System.out.printf("Площадь = %s%n", circle.area());
 
-        IShape rect = new ru.dpd.ru.dpd.study.javaCore4.lesson2.Rectangle(1.0, 2.0);
+        Shape rect = new ru.dpd.ru.dpd.study.javaCore4.lesson2.Rectangle(1.0, 2.0);
         System.out.println(rect);
         System.out.printf("Площадь = %s%n", rect.area());
 
-        IShape triangle;
+        Shape triangle;
         try {
             triangle = new Triangle(1.0, 5.0, 3.0);
         } catch (Exception e){
@@ -145,9 +144,6 @@ public class Stage5Runner {
         Employee dev = new Developer("Сидоров С.С.", new BigDecimal(1000000), "FORTRAN-86");
         System.out.println(dev);
         dev.work();
-        System.out.println();
-
-        ReadMe.printMsg();
         System.out.println();
 
         System.out.println(STR_SPLITTER);

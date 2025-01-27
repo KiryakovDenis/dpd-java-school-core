@@ -6,6 +6,6 @@ package ru.dpd.ru.dpd.study.javaCore4.lesson2;
  * Интерфейс создан в рамках задания 2 на 5 уроке по JavaCore
  * определен метод вычисления площади фигуры
  */
-public interface IShape {
+public interface Shape {
     public Double area();
 }

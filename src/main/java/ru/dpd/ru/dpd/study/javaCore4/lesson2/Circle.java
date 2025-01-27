@@ -7,7 +7,7 @@ package ru.dpd.ru.dpd.study.javaCore4.lesson2;
  * Окружность задается через радиус.
  * Реализован метод toString
  */
-public class Circle implements IShape{
+public class Circle implements Shape {
     private Double radius;
 
     public Circle(Double radius){

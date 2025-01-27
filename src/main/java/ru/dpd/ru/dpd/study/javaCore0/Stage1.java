@@ -9,10 +9,10 @@ public class Stage1 {
      *  Тернарный оператор
      *  реализовать логику, которая вернет сообщение о том, что число положительное, отрицательеное или равно нулю
      * */
-    public static void exercise1(double n){
+    public static void exercise1(double n) {
         String result;
         result = (n == 0)? "ноль":
-                         (n>0) ? "отрицательное" :
+                         (n<0) ? "отрицательное" :
                                  "положительное";
 
         System.out.println(String.format("Значение %s - ", n) + result);
@@ -24,20 +24,29 @@ public class Stage1 {
      * */
     public static void exercise2 (double temperature){
         String result;
-        if (temperature < -22) result = "Холодно";
-        else if ((temperature > -22) && (temperature <= 22 )) result = "Нормально";
-        else if (temperature > 22) result = "Жарко";
-        else result = "Непонятно";
-        System.out.println(String.format(" температура %s - ", temperature) + result);
+        if (temperature < -22) {
+            result = "Холодно";
+        }
+        else if ((temperature > -22) && (temperature <= 22 )) {
+            result = "Нормально";
+        }
+        else if (temperature > 22) {
+            result = "Жарко";
+        }
+        else {
+            result = "Непонятно";
+        }
+
+        System.out.println(String.format(" температура %s - %s", temperature, result));
     }
 
     /**
      * Упражнение 3
      * вывести на экран только четные числа без использования continue
      * */
-    public static void exercise3 (){
+    public static void exercise3() {
         for (int i = 0; i < 10; i++) {
-            if (i % 2 == 0 && i!=0) {
+            if (i % 2 == 0 && i != 0) {
                 System.out.println(i);
             }
         }
@@ -52,21 +61,18 @@ public class Stage1 {
      *     {9, 10, 11, 12}
      * };
      * */
-    public static void exercise4(){
+    public static void exercise4() {
         int[][] matrix = {
                 {1, 2, 3, 4},
                 {5, 6, 7, 8},
                 {9, 10, 11, 12}
         };
 
-        for (int i=0; i<=2; i++){
-            for (int j=0; j<=3; j++){
+        for (int i = 0; i <= 2; i++){
+            for (int j = 0; j <= 3; j++){
                 System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
         }
-
-
     }
-
 }

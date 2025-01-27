@@ -4,16 +4,16 @@ public class Rectangle {
     private Long width;
     private Long height;
 
-    public Rectangle(Long width, Long height){
+    public Rectangle(Long width, Long height) {
         this.width = width;
         this.height = height;
     }
 
-    public Long getArea(){
+    public Long getArea() {
         return this.width * this.height;
     }
 
-    public Long getPerimetr(){
+    public Long getPerimetr() {
         return (this.width + this.height) * 2;
     }
 

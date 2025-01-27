@@ -28,17 +28,17 @@ public class BankAccount {
         this(accountNumber, new BigDecimal(0));
     }
 
-    public void deposit(BigDecimal summ) throws Exception {
-        this.validate(summ);
-        this.balance = this.balance.add(summ);
+    public void deposit(BigDecimal sum) throws Exception {
+        validate(sum);
+        this.balance = balance.add(sum);
     }
 
-    private boolean validate(BigDecimal summ) throws Exception {
-        return new BigDecimal(0).compareTo(summ) <= 0;
+    private boolean validate(BigDecimal sum) throws Exception {
+        return new BigDecimal(0).compareTo(sum) <= 0;
     }
 
     private void validateSum(BigDecimal sum) throws Exception {
-        if (!this.validate(sum)) throw new Exception ("Действия с отрицальными суммами запрещены!");
+        if (!this.validate(sum)) throw new Exception ("Действия с отрицательными суммами запрещены!");
     }
 
     private BigDecimal validateBalance(BigDecimal sum) throws Exception {
@@ -49,7 +49,7 @@ public class BankAccount {
             return result;
     }
 
-    private BigDecimal getBalance(){
+    private BigDecimal getBalance() {
         return this.balance;
     }
 

@@ -7,7 +7,7 @@ package ru.dpd.ru.dpd.study.javaCore4.lesson4;
  * Задача 4: "Калькулятор"
  * Реализуйте подклассы Addition, Subtraction, Multiplication и Division, каждый из которых переопределяет метод execute().
  * */
-public class Multiplication extends Operation{
+public class Multiplication extends Operation {
     @Override
     public float execute(int a, int b) {
         return a * b;

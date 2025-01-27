@@ -9,20 +9,24 @@ public class ProArrayList {
     private String[] arr;
     private int size;
 
-    public ProArrayList(){
+    public ProArrayList() {
         this.arr = new String[DEFAULT_SIZE];
         this.size = 0;
     }
 
-    public void add(int index, String element){
-        this.increaseArrIfNeed(this.size);
+    public int size() {
+        return this.size;
+    }
+
+    public void add(int index, String element) {
+        this.provideCapacity(this.size);
         System.arraycopy(this.arr, index, this.arr, index + 1, 1);
         this.arr[index] = element;
         size++;
     }
 
-    public void add(String element){
-        this.increaseArrIfNeed(this.size);
+    public void add(String element) {
+        this.provideCapacity(this.size);
         this.arr[this.size++] = element;
     }
 
@@ -30,32 +34,23 @@ public class ProArrayList {
         return this.arr[index];
     }
 
-    public void remove(int index){
-        System.arraycopy(this.arr, index + 1, this.arr, index, this.arr.length - index - 1);
-        size--;
-        this.shrinkArrIfNeed();
+    public void remove(int index) {
+        for (int i = index; i <= this.size; i++) {
+            this.arr[i] = this.arr[i + 1];
+        }
+        this.size--;
+
     }
 
-    private void shrinkArrIfNeed(){
-        if (this.arr.length - size >  DEFAULT_SIZE + INCREASE_DELTA)
-            this.shrinkArr();
-    }
-
-    private void shrinkArr(){
-        String[] tmpArr = new String[this.arr.length - DEFAULT_SIZE];
-        System.arraycopy(this.arr, 1, tmpArr, 1, this.size);
-        this.arr = tmpArr;
-    }
-
-    private void increaseArr(){
+    private void grow() {
         String[] tmpArr = new String[this.arr.length + DEFAULT_SIZE];
         System.arraycopy(this.arr, 0, tmpArr, 0, this.arr.length);
         this.arr = tmpArr;
     }
 
-    private void increaseArrIfNeed(int index){
+    private void provideCapacity(int index) {
         if (this.arr.length - index <= INCREASE_DELTA)
-            this.increaseArr();
+            this.grow();
     }
 
     @Override
@@ -64,6 +59,4 @@ public class ProArrayList {
                 "arr=" + Arrays.toString(this.arr) +
                 '}';
     }
-
-
 }
