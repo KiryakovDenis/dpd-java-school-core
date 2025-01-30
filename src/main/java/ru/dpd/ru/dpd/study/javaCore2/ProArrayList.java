@@ -30,7 +30,7 @@ public class ProArrayList {
         this.arr[this.size++] = element;
     }
 
-    private String get(int index){
+    private String get(int index) {
         return this.arr[index];
     }
 
@@ -39,7 +39,6 @@ public class ProArrayList {
             this.arr[i] = this.arr[i + 1];
         }
         this.size--;
-
     }
 
     private void grow() {
@@ -49,8 +48,9 @@ public class ProArrayList {
     }
 
     private void provideCapacity(int index) {
-        if (this.arr.length - index <= INCREASE_DELTA)
+        if (this.arr.length - index <= INCREASE_DELTA) {
             this.grow();
+        }
     }
 
     @Override

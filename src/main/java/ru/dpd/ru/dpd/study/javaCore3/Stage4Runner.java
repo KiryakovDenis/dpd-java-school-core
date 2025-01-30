@@ -8,7 +8,7 @@ import java.util.List;
 public class Stage4Runner {
     public static final String STR_SPLITTER = "===========================================";
 
-    public static void run(){
+    public static void run() {
         System.out.println();
         System.out.println();
         System.out.println("УРОК 4");

@@ -12,22 +12,22 @@ public class Stage1 {
     public static void exercise1(double n) {
         String result;
         result = (n == 0)? "ноль":
-                         (n<0) ? "отрицательное" :
-                                 "положительное";
+                         (n < 0) ? "отрицательное"
+                                 : "положительное";
 
-        System.out.println(String.format("Значение %s - ", n) + result);
+        System.out.println(String.format("Значение %s - %S", n, result));
     }
 
     /**
      * Упражнение 2
      * реализовать логику, которая сообщит пользователю о том что на улице слишком жарко, холодно или комфортно
      * */
-    public static void exercise2 (double temperature){
+    public static void exercise2 (double temperature) {
         String result;
         if (temperature < -22) {
             result = "Холодно";
         }
-        else if ((temperature > -22) && (temperature <= 22 )) {
+        else if ((temperature > -22) && (temperature <= 22)) {
             result = "Нормально";
         }
         else if (temperature > 22) {
@@ -68,8 +68,8 @@ public class Stage1 {
                 {9, 10, 11, 12}
         };
 
-        for (int i = 0; i <= 2; i++){
-            for (int j = 0; j <= 3; j++){
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j] + " ");
             }
             System.out.println();

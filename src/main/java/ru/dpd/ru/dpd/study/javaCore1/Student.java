@@ -23,22 +23,6 @@ public class Student {
     }
 
 
-    public Long getStudentId() {
-        return studentId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer[] getGrades() {
-        return grades;
-    }
-
     public double calculateAverage() {
         if (this.grades == null) {
             return 0;
@@ -52,8 +36,8 @@ public class Student {
         }
     }
 
-    public void addGrade(Integer grade){
-        if (this.grades == null){
+    public void addGrade(Integer grade) {
+        if (this.grades == null) {
             this.grades = new Integer[1];
             this.grades[this.grades.length - 1] = grade;
         }

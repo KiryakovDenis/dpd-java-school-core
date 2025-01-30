@@ -40,7 +40,7 @@ public class Stage2 {
     public static void exercise2(Integer n1, Integer n2) {
         boolean result;
 
-        result = (n1 > 0 && n2 > 0 && n1 > n2 && (n1 + n2) % 2 == 0)? true: false;
+        result = (n1 > 0 && n2 > 0 && n1 > n2 && (n1 + n2) % 2 == 0) ? true : false;
 
         System.out.printf("n1=%s n2=%s%n" +
                 "      n1>0 - %b%n" +

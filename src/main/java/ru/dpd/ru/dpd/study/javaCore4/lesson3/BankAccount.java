@@ -38,15 +38,19 @@ public class BankAccount {
     }
 
     private void validateSum(BigDecimal sum) throws Exception {
-        if (!this.validate(sum)) throw new Exception ("Действия с отрицательными суммами запрещены!");
+        if (!this.validate(sum)) {
+            throw new Exception ("Действия с отрицательными суммами запрещены!");
+        }
     }
 
     private BigDecimal validateBalance(BigDecimal sum) throws Exception {
         BigDecimal result = this.balance.subtract(sum);
-        if (!this.validate(result))
+        if (!this.validate(result)) {
             throw new Exception("Операция приводит к отрицательному балансу");
-        else
+        }
+        else {
             return result;
+        }
     }
 
     private BigDecimal getBalance() {

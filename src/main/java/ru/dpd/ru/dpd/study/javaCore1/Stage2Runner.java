@@ -2,7 +2,7 @@ package ru.dpd.ru.dpd.study.javaCore1;
 
 public class Stage2Runner {
     public static final String STR_SPLITTER = "===========================================";
-    public static void run(){
+    public static void run() {
         System.out.println();
         System.out.println();
         System.out.println("УРОК 2");

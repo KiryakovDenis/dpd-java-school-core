@@ -15,13 +15,15 @@ public class Stage4 {
      * Напишите метод, который принимает ArrayList<Integer> и возвращает сумму всех чисел в этом списке
      */
     public static Integer sumList(List<Integer> list) {
-        if (list == null)
+        if (list == null) {
             return 0;
-        else
+        }
+        else {
             return list
                         .stream()
                         .mapToInt(Integer::intValue)
                         .sum();
+        }
     }
 
     /**

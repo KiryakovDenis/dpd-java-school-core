@@ -10,7 +10,7 @@ package ru.dpd.ru.dpd.study.javaCore4.lesson2;
 public class Circle implements Shape {
     private Double radius;
 
-    public Circle(Double radius){
+    public Circle(Double radius) {
         this.radius = radius;
     }
 

@@ -2,7 +2,7 @@ package ru.dpd.ru.dpd.study.javaCore4.lesson5;
 
 import java.math.BigDecimal;
 
-public class Manager extends Employee{
+public class Manager extends Employee {
     private String department;
 
     public Manager(String name, BigDecimal salary) {

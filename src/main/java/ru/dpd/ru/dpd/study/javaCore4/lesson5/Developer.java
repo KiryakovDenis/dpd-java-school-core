@@ -2,8 +2,8 @@ package ru.dpd.ru.dpd.study.javaCore4.lesson5;
 
 import java.math.BigDecimal;
 
-public class Developer extends Employee{
-    private String Programminglanguage;
+public class Developer extends Employee {
+    private String programminglanguage;
 
     public Developer(String name, BigDecimal salary) {
         super(name, salary);
@@ -11,21 +11,13 @@ public class Developer extends Employee{
 
     public Developer(String name, BigDecimal salary, String programminglanguage) {
         super(name, salary);
-        Programminglanguage = programminglanguage;
-    }
-
-    public String getProgramminglanguage() {
-        return Programminglanguage;
-    }
-
-    public void setProgramminglanguage(String programminglanguage) {
-        Programminglanguage = programminglanguage;
+        this.programminglanguage = programminglanguage;
     }
 
     @Override
     public String toString() {
         return  super.toString() + ";\n Developer{" +
-                "Programminglanguage='" + Programminglanguage + '\'' +
+                "Programminglanguage='" + programminglanguage + '\'' +
                 '}';
     }
 

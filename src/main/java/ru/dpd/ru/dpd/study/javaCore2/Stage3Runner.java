@@ -3,7 +3,7 @@ package ru.dpd.ru.dpd.study.javaCore2;
 public class Stage3Runner {
     public static final String STR_SPLITTER = "===========================================";
 
-    public static void run(){
+    public static void run() {
         System.out.println();
         System.out.println();
         System.out.println("УРОК 3");
