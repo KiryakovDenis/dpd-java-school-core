@@ -13,15 +13,14 @@ import java.util.Arrays;
 public class Student {
     private Long studentId;
     private String name;
-    private Integer[] grades;
+    private Integer[] grades = new Integer[100];
+    private Integer size = 0;
 
-
-    public Student (Long studentID, String name, Integer[] grades) {
-        this.studentId = studentID;
+    public Student (Long studentId, String name, Integer[] grades) {
+        this.studentId = studentId;
         this.name = name;
         this.grades = grades;
     }
-
 
     public double calculateAverage() {
         if (this.grades == null) {
@@ -37,19 +36,12 @@ public class Student {
     }
 
     public void addGrade(Integer grade) {
-        if (this.grades == null) {
-            this.grades = new Integer[1];
-            this.grades[this.grades.length - 1] = grade;
-        }
-        else {
-            Integer[] tmpArr = new Integer[this.grades.length + 1];
 
-            System.arraycopy(this.grades, 0, tmpArr, 0, this.grades.length);
-
-            tmpArr[tmpArr.length - 1] = grade;
-
-            this.grades = tmpArr;
+        if (this.size < this.grades.length) {
+            this.grades[this.size] = grade;
+            this.size++;
+        } else {
+            System.out.println("Студент получил максимальное кол-во оценок. Дальнейшее добавление оценок - невозможно");
         }
     }
-
 }
