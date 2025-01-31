@@ -11,7 +11,7 @@ public class Stage1 {
      * */
     public static void exercise1(double n) {
         String result;
-        result = (n == 0)? "ноль":
+        result = (n == 0) ? "ноль":
                          (n < 0) ? "отрицательное"
                                  : "положительное";
 
@@ -22,7 +22,7 @@ public class Stage1 {
      * Упражнение 2
      * реализовать логику, которая сообщит пользователю о том что на улице слишком жарко, холодно или комфортно
      * */
-    public static void exercise2 (double temperature) {
+    public static void exercise2(double temperature) {
         String result;
         if (temperature < -22) {
             result = "Холодно";
