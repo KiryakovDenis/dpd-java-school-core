@@ -25,10 +25,9 @@ public class Stage4 {
             return 0;
         }
         else {
-            return list
-                        .stream()
-                        .mapToInt(Integer::intValue)
-                        .sum();
+            return list.stream()
+                    .mapToInt(Integer::intValue)
+                    .sum();
         }
     }
 
